@@ -7,10 +7,53 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <section class=" hero">
+
+        <header>
+            <a href="#" class="logo">
+                <img src="./image/logo.png" alt="image" width="70px">
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newslatter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="main">
+            <div class="left">
+                <b>That's What <br><span>I Like</span></b>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsam non repudiandae, est velit commodi architecto repellat odit aspernatur animi reprehenderit laudantium porro asperiores. Optio.</p>
+                <button>View all products</button>
+            </div>
+            <div class="right">
+                <img src="./image/pepsi001.png" alt="image" width="240px" class="pepsiImage">
+            </div>
+
+            
+        </div>
+        <div class="images">
+            <img src="./image/pepsi001.png" alt="image" width="40px" onclick="imageSlider('./image/pepsi001.png');colorchanges('#0062be')">
+            <img src="./image/pepsi002.png" alt="image" width="40px" onclick="imageSlider('./image/pepsi002.png');colorchanges('#e60c2c')">
+            <img src="./image/pepsi003.png" alt="image" width="40px" onclick="imageSlider('./image/pepsi003.png');colorchanges('#1e1e1e')">
+        </div>
+    </section>
     
 
 
 
-    <script src="./script.js"></script>
+    <script>
+     const hero=document.querySelector('.hero')
+     const pepsiImage=document.querySelector('.pepsiImage')
+
+     function imageSlider(image){
+        pepsiImage.src=image
+     }
+     function colorchanges(secColor){
+        hero.style.backgroundColor=secColor
+     }
+    </script>
 </body>
 </html>
